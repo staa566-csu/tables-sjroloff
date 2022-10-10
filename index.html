@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Samantha Roloff">
+
+<title>Tables</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+<script src="index_files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="index_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Tables</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Samantha Roloff </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<p>The following table is created from the governor_state_toplines_2022 data set available at <a href="https://github.com/fivethirtyeight/data/tree/master/election-forecasts-2022">data/election-forecasts-2022 at master · fivethirtyeight/data (github.com)</a>.</p>
+<p>What I wanted to convey with this table is the likely winner of the 2022 state governor’s race as of 9/17/2022, how the polling has changed over time, and if the model (expression) used to predict the winner produces different results. If the winner is not the same across all expressions, the text of the state and likely winners will be shown in orange. (It is the month of orange &amp; black after all ;).</p>
+<p>The functionality allows the user to quickly scan and determine which races are very close and then can examine each model to determine why they are producing different results.</p>
+<p>In order to format this data set, the data will need to be wrangled in the following ways:</p>
+<p>1.) The first column will depict the state and the data will be grouped by this column.</p>
+<p>2.) Adding a likely_winner column that is an if else based on whether winner_Dparty &lt; winner_Rparty and giving the values in the columns name_D1 and name_R1.</p>
+<p>3.)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.3.6     ✔ purrr   0.3.4
+✔ tibble  3.1.8     ✔ dplyr   1.0.9
+✔ tidyr   1.2.0     ✔ stringr 1.4.1
+✔ readr   2.1.2     ✔ forcats 0.5.2
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'kableExtra'
+
+The following object is masked from 'package:dplyr':
+
+    group_rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sparkline)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#read in the dataframe</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>gov_df<span class="ot">&lt;-</span>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'governor_state_toplines_2022.csv'</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#decide if the state is likely to have a democrat or republican governor</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>gov_df<span class="sc">$</span>Governorship_leans <span class="ot">&lt;-</span> <span class="fu">with</span>(gov_df, <span class="fu">ifelse</span>(winner_Rparty <span class="sc">&lt;</span> winner_Dparty, <span class="st">'Democrat'</span>, <span class="st">'Republican'</span>))</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># convert date field to date field</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>gov_df<span class="sc">$</span>forecastdate <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(gov_df<span class="sc">$</span>forecastdate, <span class="at">format =</span> <span class="st">"%m/%d/%Y"</span> )</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">#class(gov_df$forecastdate)</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co">#make a state field</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>gov_df<span class="sc">$</span>state<span class="ot">&lt;-</span> <span class="fu">strtrim</span>(gov_df<span class="sc">$</span>district, <span class="dv">2</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co">#make a likely winner column for our table</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>gov_df<span class="sc">$</span>likely_winner<span class="ot">&lt;-</span><span class="fu">with</span>(gov_df, <span class="fu">ifelse</span>(winner_Rparty <span class="sc">&lt;</span> winner_Dparty, gov_df<span class="sc">$</span>name_D1, gov_df<span class="sc">$</span>name_R1))</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">#likelihood of winning for the likely_winner</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>gov_df<span class="sc">$</span>likelihood_winner <span class="ot">&lt;-</span> <span class="fu">with</span>(gov_df, <span class="fu">ifelse</span>(gov_df<span class="sc">$</span>Governorship_leans <span class="sc">==</span> <span class="st">'Democrat'</span>, gov_df<span class="sc">$</span>winner_D1, gov_df<span class="sc">$</span>winner_R1))</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co">#add a blank column for our sparkline to go</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>gov_df<span class="sc">$</span>sparkline<span class="ot">&lt;-</span><span class="cn">NA</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="co">#filter data to previous month</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>gov_df <span class="ot">&lt;-</span> gov_df <span class="sc">%&gt;%</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>   <span class="fu">filter</span>(forecastdate<span class="sc">&gt;</span><span class="fu">max</span>(forecastdate)<span class="sc">-</span><span class="dv">31</span>)</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="co">#reduce the # of columns</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>gov_df_slim <span class="ot">&lt;-</span> <span class="fu">subset</span> (gov_df, <span class="at">select =</span> <span class="fu">c</span>(state, expression, likely_winner, forecastdate, likelihood_winner, sparkline))</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="co">#There is probably a better way to do this, but a nested for loop was taking WAY too long.</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a><span class="co">#filter to _lite expression</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>gov_df_lite <span class="ot">&lt;-</span> gov_df_slim <span class="sc">%&gt;%</span> <span class="fu">filter</span>(expression <span class="sc">==</span> <span class="st">'_lite'</span>)</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a><span class="co"># add the data for the figure</span></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(s <span class="cf">in</span> gov_df_lite<span class="sc">$</span>state)</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>  {state_polling <span class="ot">&lt;-</span> gov_df_lite <span class="sc">%&gt;%</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(state<span class="sc">==</span>s) <span class="sc">%&gt;%</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(forecastdate) <span class="sc">%&gt;%</span></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(likelihood_winner)</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add figure to data.frame</span></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>  gov_df_lite[<span class="fu">which</span>(gov_df_lite<span class="sc">$</span>state<span class="sc">==</span>s),<span class="st">"sparkline"</span>] <span class="ot">&lt;-</span> <span class="fu">spk_chr</span>(state_polling)</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a><span class="co">#reduce the # of columns</span></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>gov_df_lite <span class="ot">&lt;-</span> <span class="fu">subset</span> (gov_df_lite, <span class="at">select =</span> <span class="fu">c</span>(state, expression, likely_winner, sparkline))</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a><span class="co">#drop duplicates</span></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>gov_df_lite<span class="ot">&lt;-</span><span class="fu">distinct</span>(gov_df_lite)</span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a><span class="co">#filter to _classic expression</span></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>gov_df_classic <span class="ot">&lt;-</span> gov_df_slim <span class="sc">%&gt;%</span> <span class="fu">filter</span>(expression <span class="sc">==</span> <span class="st">'_classic'</span>)</span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a><span class="co"># add the data for the figure</span></span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(s <span class="cf">in</span> gov_df_classic<span class="sc">$</span>state)</span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>  {state_polling <span class="ot">&lt;-</span> gov_df_classic <span class="sc">%&gt;%</span></span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(state<span class="sc">==</span>s) <span class="sc">%&gt;%</span></span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(forecastdate) <span class="sc">%&gt;%</span></span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(likelihood_winner)</span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add figure to data.frame</span></span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>  gov_df_classic[<span class="fu">which</span>(gov_df_classic<span class="sc">$</span>state<span class="sc">==</span>s),<span class="st">"sparkline"</span>] <span class="ot">&lt;-</span> <span class="fu">spk_chr</span>(state_polling)</span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a><span class="co">#reduce the # of columns</span></span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>gov_df_classic <span class="ot">&lt;-</span> <span class="fu">subset</span> (gov_df_classic, <span class="at">select =</span> <span class="fu">c</span>(state, expression, likely_winner, sparkline))</span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a><span class="co">#drop duplicates</span></span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>gov_df_classic<span class="ot">&lt;-</span><span class="fu">distinct</span>(gov_df_classic)</span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a><span class="co">#filter to _deluxe expression</span></span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>gov_df_deluxe <span class="ot">&lt;-</span> gov_df_slim <span class="sc">%&gt;%</span> <span class="fu">filter</span>(expression <span class="sc">==</span> <span class="st">'_deluxe'</span>)</span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a><span class="co"># add the data for the figure</span></span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(s <span class="cf">in</span> gov_df_deluxe<span class="sc">$</span>state)</span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>  {state_polling <span class="ot">&lt;-</span> gov_df_deluxe <span class="sc">%&gt;%</span></span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(state<span class="sc">==</span>s) <span class="sc">%&gt;%</span></span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(forecastdate) <span class="sc">%&gt;%</span></span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(likelihood_winner)</span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add figure to data.frame</span></span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a>  gov_df_deluxe[<span class="fu">which</span>(gov_df_deluxe<span class="sc">$</span>state<span class="sc">==</span>s),<span class="st">"sparkline"</span>] <span class="ot">&lt;-</span> <span class="fu">spk_chr</span>(state_polling)</span>
+<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a><span class="co">#reduce the # of columns</span></span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a>gov_df_deluxe <span class="ot">&lt;-</span> <span class="fu">subset</span> (gov_df_deluxe, <span class="at">select =</span> <span class="fu">c</span>(state, expression, likely_winner, sparkline))</span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a><span class="co">#drop duplicates</span></span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>gov_df_deluxe<span class="ot">&lt;-</span><span class="fu">distinct</span>(gov_df_deluxe)</span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a><span class="co">#stack the dataframe</span></span>
+<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a>gov_df_slim <span class="ot">&lt;-</span> <span class="fu">rbind</span>(gov_df_lite, gov_df_classic, gov_df_deluxe)</span>
+<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a>gov_df_slim <span class="ot">&lt;-</span> gov_df_slim <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(state, expression)</span>
+<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a><span class="co">#table formatting</span></span>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a>tbl_gov_df_slim <span class="ot">&lt;-</span> gov_df_slim <span class="sc">%&gt;%</span></span>
+<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">col.names =</span> <span class="fu">c</span>(</span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a>    <span class="st">"State"</span>,</span>
+<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Expression"</span>,</span>
+<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Likely Winner"</span>,</span>
+<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Likelihood of Winning"</span></span>
+<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span> <span class="fu">kable_styling</span>(<span class="at">font_size =</span> <span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_classic</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">html_font =</span> <span class="st">"arial"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_paper</span>(<span class="at">lightable_options =</span> <span class="st">"hover"</span>, <span class="at">full_width =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a>tbl_gov_df_slim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<table class="table lightable-classic lightable-paper lightable-hover" style="font-size: 18px; margin-left: auto; margin-right: auto; font-family: arial; width: auto !important; margin-left: auto; margin-right: auto; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> State </th>
+   <th style="text-align:left;"> Expression </th>
+   <th style="text-align:left;"> Likely Winner </th>
+   <th style="text-align:left;"> Likelihood of Winning </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> AK </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Mike Dunleavy </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-612b70a6fe7d5964fc46" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-612b70a6fe7d5964fc46"&gt;{"x":{"values":[0.67865,0.679325,0.675625,0.680425,0.675925,0.68025,0.683325,0.8086,0.810025,0.806575,0.809275,0.80765,0.80935,0.807875,0.808175,0.80645,0.813,0.809125,0.810575,0.808375,0.81255,0.807875,0.808475,0.8103,0.80975,0.812,0.81315,0.813175,0.8164,0.817325,0.81765],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AK </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Mike Dunleavy </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-071cab079ead6632c8e5" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-071cab079ead6632c8e5"&gt;{"x":{"values":[0.683575,0.684675,0.681825,0.6871,0.682625,0.685875,0.6878,0.809675,0.8119,0.807375,0.81065,0.809075,0.810375,0.809225,0.80985,0.80765,0.81455,0.810175,0.8122,0.810025,0.813775,0.808925,0.80925,0.811625,0.810475,0.812575,0.814,0.8138,0.8206,0.8225,0.8223],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AK </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Mike Dunleavy </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-655793ac05e8a8400383" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-655793ac05e8a8400383"&gt;{"x":{"values":[0.653325,0.65205,0.646675,0.6524,0.65115,0.656075,0.66625,0.7528,0.7541,0.7501,0.75555,0.753275,0.755025,0.75155,0.75285,0.74975,0.75245,0.751525,0.753725,0.754575,0.755725,0.754625,0.75575,0.75825,0.7566,0.758375,0.7597,0.759025,0.7848,0.7848,0.785],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AL </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Kay Ivey </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-08f33f49f544d53c7d95" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-08f33f49f544d53c7d95"&gt;{"x":{"values":[0.999325,0.99895,0.999025,0.99895,0.99925,0.999325,0.99905,0.999175,0.999075,0.99935,0.999025,0.9994,0.9991,0.999325,0.9993,0.9993,0.9989,0.9992,0.999325,0.999225,0.998975,0.99865,0.9992,0.99925,0.99885,0.998975,0.99915,0.99895,0.9989,0.999175,0.9993],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AL </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Kay Ivey </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-82d26b70f01fbdfa9856" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-82d26b70f01fbdfa9856"&gt;{"x":{"values":[0.999425,0.999075,0.9992,0.999025,0.999325,0.999475,0.999175,0.9992,0.99925,0.999425,0.9992,0.999575,0.99925,0.99935,0.999325,0.999375,0.998975,0.999375,0.999425,0.99935,0.99915,0.99885,0.9993,0.999325,0.998975,0.9992,0.999275,0.99905,0.99905,0.999325,0.999375],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AL </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Kay Ivey </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-82ff680a327cd14e050c" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-82ff680a327cd14e050c"&gt;{"x":{"values":[0.9819,0.9788,0.980575,0.979925,0.9817,0.984675,0.983725,0.983675,0.9838,0.984475,0.984425,0.984825,0.9816,0.983425,0.98385,0.983675,0.983,0.984775,0.983375,0.9849,0.983075,0.983725,0.978175,0.97805,0.978825,0.9784,0.977575,0.977575,0.974975,0.97595,0.976175],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AR </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Sarah Huckabee Sanders </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-f70e36deb25f3b368310" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-f70e36deb25f3b368310"&gt;{"x":{"values":[0.998525,0.998225,0.998625,0.998675,0.999,0.998425,0.998525,0.998875,0.998825,0.99865,0.998675,0.99875,0.9986,0.99865,0.99875,0.998475,0.99875,0.998375,0.998875,0.998825,0.9989,0.998575,0.998625,0.99815,0.998725,0.998325,0.998625,0.998375,0.998125,0.998425,0.998325],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AR </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Sarah Huckabee Sanders </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-d14a9f121239f7474ec9" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-d14a9f121239f7474ec9"&gt;{"x":{"values":[0.99885,0.998625,0.998975,0.999075,0.999225,0.998775,0.998875,0.999025,0.999,0.998875,0.9988,0.998975,0.998825,0.998825,0.998925,0.99865,0.998975,0.9987,0.99905,0.99895,0.999025,0.998825,0.9989,0.998375,0.999,0.998575,0.9988,0.9986,0.998325,0.9986,0.998675],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AR </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Sarah Huckabee Sanders </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-a9e36332a45b23aae2bb" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-a9e36332a45b23aae2bb"&gt;{"x":{"values":[0.959325,0.958125,0.95855,0.9591,0.959975,0.962375,0.964975,0.96305,0.962375,0.963075,0.9613,0.96265,0.9594,0.9584,0.96,0.960725,0.96145,0.9588,0.960475,0.955475,0.956725,0.95745,0.93015,0.92815,0.928575,0.93245,0.930475,0.92915,0.928775,0.933275,0.9295],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AZ </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Katie Hobbs </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-95e46950299c8945ff4c" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-95e46950299c8945ff4c"&gt;{"x":{"values":[0.60585,0.594725,0.5967,0.5954,0.59415,0.600125,0.5925,0.597425,0.60075,0.59815,0.59755,0.609375,0.57765,0.580625,0.5703,0.565825,0.56815,0.5632,0.56745,0.57855,0.577575,0.581225,0.558175,0.55825,0.557825,0.5563,0.6159,0.6263,0.676125,0.6748,0.6805],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AZ </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Katie Hobbs </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-3eed0af166b5873f82be" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-3eed0af166b5873f82be"&gt;{"x":{"values":[0.548475,0.54045,0.54435,0.542525,0.54125,0.54665,0.5433,0.54505,0.5513,0.54605,0.54535,0.558825,0.5336,0.540325,0.533,0.529725,0.530375,0.5281,0.53175,0.54135,0.539425,0.5441,0.527175,0.528075,0.52655,0.5267,0.56925,0.576,0.61655,0.614275,0.61615],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AZ </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Katie Hobbs </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-92a1013002945fdb04bb" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-92a1013002945fdb04bb"&gt;{"x":{"values":[0.617975,0.600625,0.602175,0.6009,0.60055,0.60535,0.597225,0.60025,0.604475,0.599575,0.599175,0.63335,0.5969,0.596175,0.605825,0.60175,0.605375,0.59755,0.603225,0.6134,0.61315,0.6133,0.585575,0.584875,0.585775,0.58385,0.6591,0.671525,0.732625,0.7321,0.736725],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CA </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Gavin Newsom </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-1428e88d889c38d2c42c" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-1428e88d889c38d2c42c"&gt;{"x":{"values":[0.997,0.99735,0.996775,0.996875,0.996725,0.9983,0.998575,0.998775,0.998625,0.998525,0.99865,0.9984,0.998625,0.998875,0.998925,0.99855,0.998675,0.99865,0.9987,0.998675,0.998875,0.99905,0.998675,0.9988,0.99865,0.999275,0.998775,0.9991,0.999575,0.999375,0.99935],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CA </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Gavin Newsom </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-ea6d2c32940d0b89ce8f" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-ea6d2c32940d0b89ce8f"&gt;{"x":{"values":[0.99725,0.99745,0.996925,0.9971,0.99685,0.9986,0.9988,0.998975,0.99875,0.99885,0.99895,0.998725,0.998825,0.999075,0.999125,0.9988,0.9988,0.9989,0.99885,0.9989,0.998975,0.99925,0.998925,0.999075,0.99885,0.9994,0.998975,0.99935,0.99965,0.9995,0.99945],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CA </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Gavin Newsom </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-bfc8498a2b374bca12f5" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-bfc8498a2b374bca12f5"&gt;{"x":{"values":[0.975825,0.97635,0.975425,0.97565,0.9757,0.99025,0.98905,0.98995,0.98945,0.98985,0.990175,0.989975,0.98955,0.99075,0.99115,0.990525,0.99115,0.9902,0.9907,0.99105,0.990925,0.99165,0.9898,0.989125,0.989225,0.990975,0.98975,0.99205,0.997975,0.998025,0.997975],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CO </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Jared Polis </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-ceceb91acfbb3cba0544" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-ceceb91acfbb3cba0544"&gt;{"x":{"values":[0.949075,0.950025,0.950575,0.948975,0.9511,0.915925,0.91395,0.9146,0.9146,0.91745,0.917425,0.917575,0.916825,0.9323,0.93315,0.933,0.93425,0.932575,0.9335,0.93345,0.93615,0.935275,0.938425,0.936575,0.93775,0.937425,0.942575,0.942175,0.943825,0.9426,0.9417],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CO </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Jared Polis </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-292af57a1598312f86de" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-292af57a1598312f86de"&gt;{"x":{"values":[0.968825,0.969425,0.97005,0.967775,0.969575,0.9592,0.9573,0.9582,0.9591,0.959525,0.9606,0.959775,0.95975,0.966975,0.967125,0.9675,0.967575,0.9675,0.966925,0.96815,0.969,0.96965,0.96995,0.96895,0.969825,0.9702,0.972325,0.9725,0.972225,0.971675,0.97245],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CO </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Jared Polis </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-66355f14ffcc9c315ab0" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-66355f14ffcc9c315ab0"&gt;{"x":{"values":[0.848675,0.848225,0.85195,0.846525,0.84725,0.85815,0.8546,0.852275,0.853275,0.8584,0.85825,0.85685,0.858925,0.89785,0.898925,0.898475,0.8973,0.89645,0.89865,0.898475,0.901225,0.898025,0.898375,0.8983,0.897825,0.896725,0.899525,0.8979,0.8992,0.89995,0.8971],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CT </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Edward Lamont </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-8239f1d35c4b6b77671c" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-8239f1d35c4b6b77671c"&gt;{"x":{"values":[0.8539,0.856675,0.8546,0.8549,0.85645,0.856775,0.857425,0.862175,0.8618,0.86475,0.86225,0.8637,0.8641,0.872,0.876475,0.87315,0.8755,0.8748,0.875775,0.885,0.883875,0.8852,0.8831,0.8888,0.8852,0.889425,0.864775,0.870025,0.8723,0.87155,0.868825],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CT </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Edward Lamont </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-554ce045310a50176b82" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-554ce045310a50176b82"&gt;{"x":{"values":[0.9181,0.9183,0.91795,0.918075,0.91915,0.918525,0.9208,0.921375,0.921325,0.922825,0.922575,0.92295,0.925075,0.92955,0.931025,0.92895,0.92965,0.931125,0.929925,0.933525,0.936,0.9366,0.933725,0.93825,0.937075,0.93825,0.9242,0.927925,0.92975,0.9281,0.929],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CT </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Edward Lamont </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-31d6bfc7f180f23914b9" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-31d6bfc7f180f23914b9"&gt;{"x":{"values":[0.923075,0.9235,0.92335,0.922575,0.922925,0.92175,0.9226,0.922975,0.922275,0.924425,0.922375,0.923475,0.925525,0.9285,0.93035,0.92735,0.9278,0.9295,0.9285,0.932475,0.934775,0.933975,0.930725,0.9358,0.93385,0.934525,0.9067,0.909425,0.911775,0.9103,0.909325],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> FL </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Ron DeSantis </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-a5e5bf4d24d5668c7992" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-a5e5bf4d24d5668c7992"&gt;{"x":{"values":[0.889725,0.872225,0.874475,0.873575,0.87585,0.87335,0.874675,0.87525,0.895675,0.891475,0.892525,0.889125,0.8899,0.88605,0.90525,0.903925,0.90345,0.90755,0.90605,0.903725,0.8768,0.8793,0.87235,0.8743,0.875925,0.879075,0.8939,0.885775,0.880025,0.878875,0.877325],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> FL </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Ron DeSantis </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-38f6617e557577933d8b" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-38f6617e557577933d8b"&gt;{"x":{"values":[0.9231,0.915225,0.914975,0.91595,0.9168,0.917125,0.916575,0.915325,0.9261,0.924775,0.92625,0.92685,0.924725,0.92295,0.9351,0.9321,0.93315,0.93525,0.933825,0.9329,0.92005,0.9212,0.91745,0.918375,0.9182,0.921025,0.929725,0.924475,0.92235,0.922775,0.9205],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> FL </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Ron DeSantis </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-7a5166c2424bed7ddff5" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-7a5166c2424bed7ddff5"&gt;{"x":{"values":[0.7964,0.79195,0.79745,0.794725,0.79475,0.793375,0.79065,0.79425,0.833525,0.8263,0.826525,0.82815,0.834875,0.827775,0.860475,0.86005,0.858425,0.862775,0.8615,0.8576,0.8308,0.83365,0.82295,0.823725,0.8249,0.842925,0.87595,0.8662,0.8594,0.8641,0.862075],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> GA </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Brian Kemp </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-c32ea21c3bdfc1804d73" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-c32ea21c3bdfc1804d73"&gt;{"x":{"values":[0.832675,0.834475,0.8355,0.83505,0.8344,0.83385,0.83165,0.8322,0.832475,0.832375,0.831825,0.83185,0.820275,0.816675,0.82235,0.82235,0.821425,0.823825,0.82285,0.8227,0.817175,0.8184,0.833675,0.835225,0.831725,0.83645,0.810925,0.8002,0.798825,0.793475,0.795975],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> GA </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Brian Kemp </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-863a1bfc7b80701ed1fb" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-863a1bfc7b80701ed1fb"&gt;{"x":{"values":[0.849225,0.851175,0.852275,0.85325,0.851875,0.850575,0.847925,0.84855,0.848925,0.8509,0.8478,0.8483,0.84035,0.83775,0.839925,0.84055,0.8368,0.841075,0.841175,0.841125,0.8335,0.836525,0.84675,0.84915,0.84445,0.84915,0.8297,0.822625,0.82395,0.820225,0.8171],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> GA </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Brian Kemp </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-a66a52882f33b283762c" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-a66a52882f33b283762c"&gt;{"x":{"values":[0.801,0.80195,0.8031,0.8038,0.801925,0.8034,0.7995,0.799525,0.8009,0.8017,0.80125,0.802475,0.780775,0.7762,0.77395,0.776375,0.777725,0.7769,0.7767,0.7738,0.7692,0.769375,0.794425,0.793725,0.790975,0.793875,0.76225,0.7494,0.752775,0.74745,0.749675],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> HI </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Josh Green </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-42858a6d6130716dfaaf" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-42858a6d6130716dfaaf"&gt;{"x":{"values":[0.995675,0.995475,0.996,0.995,0.994875,0.995825,0.99535,0.995425,0.9956,0.99575,0.996075,0.99565,0.996675,0.996575,0.996225,0.9967,0.996925,0.996825,0.99715,0.99705,0.997475,0.997375,0.9968,0.9962,0.996425,0.9963,0.996625,0.99715,0.996825,0.997125,0.99715],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> HI </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Josh Green </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-80cd582bd452e0e8d23b" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-80cd582bd452e0e8d23b"&gt;{"x":{"values":[0.995875,0.9959,0.996425,0.99525,0.99525,0.99625,0.99575,0.995925,0.996,0.9961,0.996375,0.99615,0.99705,0.996775,0.9966,0.997025,0.99715,0.997175,0.997525,0.99725,0.9978,0.9978,0.997,0.996625,0.996775,0.9969,0.997025,0.997675,0.997325,0.99765,0.9975],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> HI </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Josh Green </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-898de8799b64a817f111" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-898de8799b64a817f111"&gt;{"x":{"values":[0.9197,0.92205,0.924275,0.920775,0.919125,0.937775,0.939,0.939775,0.939625,0.941375,0.9422,0.94035,0.937325,0.9477,0.947825,0.9455,0.94625,0.93985,0.94115,0.9415,0.9402,0.94035,0.78165,0.781,0.777725,0.810125,0.8274,0.856275,0.88305,0.876325,0.875925],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> IA </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Kim Reynolds </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-098d9cea34ff619abfb2" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-098d9cea34ff619abfb2"&gt;{"x":{"values":[0.983425,0.9828,0.984325,0.983325,0.98425,0.985675,0.9843,0.9849,0.98505,0.98365,0.984625,0.984225,0.983875,0.98255,0.982475,0.98195,0.9842,0.984675,0.98435,0.983575,0.983675,0.983625,0.9834,0.98435,0.982625,0.98335,0.98305,0.9834,0.982525,0.983625,0.98345],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> IA </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Kim Reynolds </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-7bb0fa3e71f6934fc4e4" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-7bb0fa3e71f6934fc4e4"&gt;{"x":{"values":[0.9908,0.99015,0.990825,0.990275,0.990425,0.991325,0.990975,0.99085,0.991325,0.990075,0.990575,0.990675,0.99065,0.98975,0.98965,0.9891,0.99045,0.99105,0.9906,0.9906,0.990225,0.990025,0.9901,0.991625,0.989875,0.990375,0.989475,0.989875,0.98965,0.99035,0.99015],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> IA </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Kim Reynolds </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-ffdafde4ca11d2d6e985" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-ffdafde4ca11d2d6e985"&gt;{"x":{"values":[0.940125,0.9383,0.9401,0.940225,0.940425,0.9416,0.941075,0.939275,0.94175,0.939425,0.94155,0.94275,0.9393,0.937275,0.935725,0.935075,0.93845,0.9383,0.9392,0.93705,0.935725,0.937575,0.942725,0.9428,0.94065,0.9418,0.940525,0.939375,0.937875,0.937125,0.9387],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ID </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Brad Little </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-1abdca0f4b9b68a13529" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-1abdca0f4b9b68a13529"&gt;{"x":{"values":[0.99975,0.999625,0.9995,0.99955,0.999625,0.9997,0.999675,0.9996,0.999625,0.999575,0.99965,0.9994,0.99955,0.999375,0.9997,0.99965,0.999575,0.9994,0.99955,0.99965,0.999425,0.9995,0.99955,0.999575,0.99955,0.999575,0.999625,0.99945,0.99955,0.999525,0.999475],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ID </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Brad Little </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-e6a85b0a6e497cca5a25" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-e6a85b0a6e497cca5a25"&gt;{"x":{"values":[0.9998,0.99965,0.999525,0.999575,0.999625,0.999725,0.99975,0.99965,0.999675,0.9996,0.99965,0.99945,0.99965,0.999475,0.99975,0.99975,0.999675,0.999575,0.9996,0.9997,0.999475,0.99955,0.999575,0.999575,0.999625,0.999575,0.99975,0.9995,0.99965,0.99955,0.99955],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ID </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Brad Little </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-9efdef200a6de43cfdf0" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-9efdef200a6de43cfdf0"&gt;{"x":{"values":[0.9887,0.9892,0.98885,0.9891,0.989775,0.9929,0.99225,0.991825,0.992575,0.990825,0.991875,0.991375,0.9906,0.991225,0.9918,0.991875,0.9915,0.99165,0.992125,0.991525,0.990525,0.991375,0.985225,0.985475,0.985,0.98695,0.98655,0.985425,0.9842,0.98555,0.984375],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> IL </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> J.B. Pritzker </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-82d2d66945e1ac17cfd6" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-82d2d66945e1ac17cfd6"&gt;{"x":{"values":[0.95675,0.959,0.959575,0.9591,0.96025,0.958475,0.95965,0.958825,0.959925,0.9608,0.960925,0.9629,0.98475,0.985325,0.98545,0.987675,0.985725,0.986725,0.98665,0.987,0.97865,0.978425,0.979575,0.9777,0.9793,0.979775,0.9787,0.980075,0.98005,0.979875,0.979325],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> IL </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> J.B. Pritzker </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-57a56fd15f2a43bd0dca" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-57a56fd15f2a43bd0dca"&gt;{"x":{"values":[0.972025,0.97435,0.974225,0.97465,0.97425,0.97385,0.97435,0.974525,0.9754,0.97525,0.975575,0.976025,0.9885,0.98805,0.988575,0.9902,0.98905,0.989575,0.989625,0.98975,0.985075,0.985,0.98635,0.984325,0.9855,0.986375,0.98555,0.9863,0.986725,0.98655,0.986325],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> IL </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> J.B. Pritzker </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-502815ad4a833d669cf1" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-502815ad4a833d669cf1"&gt;{"x":{"values":[0.89925,0.901825,0.901425,0.902625,0.89985,0.902225,0.9025,0.901875,0.903225,0.905725,0.90485,0.905075,0.95785,0.9601,0.959775,0.96325,0.9607,0.961125,0.96105,0.96455,0.958925,0.959025,0.9607,0.958,0.958625,0.95855,0.956875,0.958475,0.95795,0.958275,0.956975],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> KS </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Laura Kelly </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-6bc0afd84a543a182e12" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-6bc0afd84a543a182e12"&gt;{"x":{"values":[0.566575,0.569475,0.570575,0.56765,0.567,0.5625,0.567275,0.56595,0.57075,0.572925,0.5735,0.57655,0.5784,0.5885,0.590875,0.589975,0.591925,0.595,0.5981,0.60625,0.6069,0.6079,0.626625,0.634325,0.634825,0.6326,0.772925,0.781325,0.780625,0.7822,0.779975],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> KS </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Laura Kelly </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-5c6963ea561ea10c5173" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-5c6963ea561ea10c5173"&gt;{"x":{"values":[0.5229,0.52535,0.525925,0.5231,0.5237,0.52075,0.526575,0.52525,0.52855,0.530525,0.532225,0.535775,0.534525,0.545875,0.545575,0.545375,0.54765,0.548225,0.5528,0.55795,0.56055,0.56315,0.572475,0.5778,0.58125,0.580425,0.6832,0.69115,0.68825,0.692225,0.693475],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> KS </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Laura Kelly </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-7e6bbbf290c0e7f8e3ee" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-7e6bbbf290c0e7f8e3ee"&gt;{"x":{"values":[0.558525,0.558675,0.55995,0.5554,0.55625,0.5396,0.538425,0.539575,0.542675,0.545575,0.5504,0.5536,0.562025,0.56745,0.567275,0.56225,0.563975,0.5744,0.576675,0.59495,0.5946,0.59365,0.704325,0.70765,0.708675,0.7002,0.847625,0.8529,0.84865,0.84975,0.8471],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MA </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Maura Healey </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-76203a42ccc4c8c1c66b" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-76203a42ccc4c8c1c66b"&gt;{"x":{"values":[0.99905,0.999075,0.99905,0.999125,0.99905,0.998925,0.9989,0.9992,0.999325,0.9991,0.999075,0.9994,0.999175,0.999225,0.99935,0.99935,0.999575,0.99925,0.999025,0.999225,0.999475,0.9994,0.9974,0.9974,0.997475,0.99745,0.997625,0.9969,0.99715,0.997325,0.997],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MA </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Maura Healey </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-2ca86c94c297fa2f9cdf" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-2ca86c94c297fa2f9cdf"&gt;{"x":{"values":[0.99595,0.99645,0.9964,0.9963,0.99625,0.99655,0.996325,0.996275,0.9969,0.996675,0.996325,0.997225,0.996625,0.997025,0.99715,0.99675,0.9973,0.99705,0.99735,0.996975,0.997325,0.997425,0.994525,0.994525,0.99495,0.994225,0.99505,0.996425,0.996575,0.99695,0.996625],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MA </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Maura Healey </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-027df9f3c172b475258d" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-027df9f3c172b475258d"&gt;{"x":{"values":[0.99685,0.9974,0.99705,0.9971,0.99725,0.99725,0.99715,0.996975,0.997725,0.99715,0.9972,0.997725,0.997275,0.99755,0.9978,0.9977,0.997925,0.997625,0.99765,0.99735,0.997925,0.99795,0.988225,0.988775,0.989075,0.989325,0.990325,0.991375,0.99115,0.991575,0.99095],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MD </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Wes Moore </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-713fb734fc242714374d" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-713fb734fc242714374d"&gt;{"x":{"values":[0.943375,0.946075,0.9442,0.94645,0.94435,0.94675,0.9496,0.9462,0.948125,0.949175,0.9496,0.948875,0.948475,0.95175,0.9525,0.953475,0.95375,0.9526,0.953425,0.952875,0.955275,0.955,0.944025,0.94445,0.9449,0.946425,0.948625,0.95315,0.953925,0.952075,0.9522],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MD </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Wes Moore </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-87b09e5442c34f6addda" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-87b09e5442c34f6addda"&gt;{"x":{"values":[0.958225,0.96035,0.959075,0.960575,0.9593,0.960725,0.963375,0.96075,0.962,0.962325,0.962875,0.9637,0.96275,0.965425,0.9645,0.964225,0.96565,0.96475,0.964575,0.965025,0.967075,0.96735,0.960725,0.9611,0.96235,0.962175,0.964125,0.96665,0.9662,0.965225,0.96535],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MD </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Wes Moore </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-2f45cbfab375263ebafd" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-2f45cbfab375263ebafd"&gt;{"x":{"values":[0.90325,0.905225,0.905125,0.906925,0.904,0.923025,0.92805,0.926475,0.9256,0.92635,0.929925,0.9293,0.926025,0.93575,0.93905,0.940975,0.9407,0.93415,0.93425,0.9355,0.939075,0.9356,0.8005,0.798275,0.79785,0.826575,0.84435,0.867775,0.8919,0.8819,0.883775],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ME </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Janet T. Mills </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-545b7f35a764ec8e4139" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-545b7f35a764ec8e4139"&gt;{"x":{"values":[0.828375,0.830025,0.827225,0.824975,0.827075,0.83,0.82715,0.835075,0.831625,0.83355,0.8304,0.831425,0.837775,0.8445,0.849475,0.844525,0.84575,0.847075,0.8459,0.854125,0.856475,0.854875,0.856175,0.858125,0.8608,0.854675,0.86175,0.86785,0.865725,0.8905,0.89285],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ME </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Janet T. Mills </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-199bd36bb6a12e452694" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-199bd36bb6a12e452694"&gt;{"x":{"values":[0.817825,0.818725,0.81665,0.8145,0.81685,0.819925,0.81725,0.8248,0.821,0.8237,0.82115,0.822,0.82685,0.834175,0.837175,0.8331,0.8347,0.83525,0.83485,0.8424,0.84485,0.842525,0.8441,0.84555,0.8475,0.84235,0.8492,0.855625,0.8535,0.871875,0.8739],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ME </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Janet T. Mills </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-9b9575d52489e690e8f5" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-9b9575d52489e690e8f5"&gt;{"x":{"values":[0.769775,0.768525,0.7673,0.763825,0.766375,0.769675,0.766425,0.771275,0.768975,0.773275,0.769325,0.7687,0.7748,0.783975,0.789375,0.7832,0.785,0.7876,0.78705,0.7963,0.798125,0.79505,0.8027,0.804925,0.806725,0.799775,0.8097,0.817,0.81685,0.85215,0.854625],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MI </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Gretchen Whitmer </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-27100affb7aab1820fe8" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-27100affb7aab1820fe8"&gt;{"x":{"values":[0.966975,0.969,0.967375,0.967,0.9692,0.969725,0.966125,0.96825,0.9521,0.9494,0.951375,0.9523,0.951125,0.951375,0.953325,0.953775,0.95255,0.952875,0.954,0.953675,0.9541,0.95395,0.95595,0.955725,0.9564,0.955875,0.956775,0.95945,0.959575,0.957775,0.958425],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MI </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Gretchen Whitmer </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-29fdba1c872f70aae4c2" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-29fdba1c872f70aae4c2"&gt;{"x":{"values":[0.927675,0.930025,0.928575,0.92625,0.930225,0.93055,0.926375,0.930025,0.91505,0.91145,0.913075,0.915575,0.9145,0.915925,0.916725,0.917875,0.91885,0.91715,0.91785,0.918975,0.92075,0.919775,0.92185,0.923,0.922725,0.922175,0.921325,0.92705,0.926,0.925575,0.925125],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MI </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Gretchen Whitmer </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-ebc659ee8ad83674f759" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-ebc659ee8ad83674f759"&gt;{"x":{"values":[0.930075,0.931975,0.9299,0.9277,0.931525,0.9316,0.92585,0.9297,0.940575,0.937475,0.9401,0.9421,0.94035,0.940925,0.9428,0.943525,0.942775,0.943275,0.943325,0.944575,0.948625,0.94735,0.9469,0.94715,0.9478,0.94725,0.94545,0.94885,0.94925,0.94705,0.9473],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MN </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Tim Walz </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-23e81bfcaefdb47d934c" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-23e81bfcaefdb47d934c"&gt;{"x":{"values":[0.892175,0.889325,0.8942,0.891375,0.893775,0.891,0.89185,0.89475,0.8963,0.895425,0.895125,0.89435,0.89705,0.902275,0.905475,0.902875,0.905675,0.90495,0.906075,0.96965,0.9702,0.970175,0.972025,0.972625,0.9716,0.9773,0.9784,0.978975,0.9789,0.979025,0.97915],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MN </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Tim Walz </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-e151882cc1c8e778b621" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-e151882cc1c8e778b621"&gt;{"x":{"values":[0.89815,0.895775,0.900375,0.8976,0.900125,0.897425,0.8991,0.9016,0.902575,0.9016,0.90185,0.9013,0.9035,0.9079,0.91015,0.90765,0.910775,0.90995,0.9111,0.9556,0.95825,0.956725,0.959125,0.9597,0.9589,0.964625,0.9663,0.96775,0.968275,0.96755,0.96745],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> MN </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Tim Walz </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-410b98807dd80fd28cd0" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-410b98807dd80fd28cd0"&gt;{"x":{"values":[0.817975,0.8161,0.820475,0.81675,0.817225,0.817775,0.815925,0.81865,0.81925,0.822375,0.8187,0.8212,0.8224,0.82955,0.83405,0.8304,0.834875,0.83485,0.834825,0.949375,0.951125,0.949475,0.9571,0.95835,0.956525,0.973425,0.974425,0.975525,0.97505,0.9752,0.974975],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NE </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Jim Pillen </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-26aef30c1fa5c323cd06" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-26aef30c1fa5c323cd06"&gt;{"x":{"values":[0.9922,0.992575,0.992525,0.99205,0.992675,0.9922,0.99215,0.993025,0.9927,0.992825,0.99225,0.9924,0.9928,0.992325,0.99225,0.992375,0.992375,0.99295,0.992575,0.991925,0.99205,0.9917,0.99055,0.990225,0.98985,0.990975,0.989825,0.990075,0.98985,0.990425,0.9901],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NE </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Jim Pillen </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-d8b5943cde1ae1a3b13c" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-d8b5943cde1ae1a3b13c"&gt;{"x":{"values":[0.99355,0.993925,0.9937,0.99355,0.9943,0.993775,0.993375,0.994275,0.9942,0.994225,0.99355,0.993675,0.9938,0.99385,0.993925,0.993475,0.994025,0.99425,0.9937,0.993425,0.9935,0.9931,0.9925,0.9924,0.991875,0.9928,0.991825,0.992325,0.9919,0.9922,0.9923],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NE </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Jim Pillen </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-d2d0016482369f60064c" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-d2d0016482369f60064c"&gt;{"x":{"values":[0.837,0.835675,0.83685,0.8354,0.837975,0.86405,0.8691,0.86425,0.859125,0.860075,0.86065,0.85155,0.836075,0.843175,0.84235,0.847875,0.843675,0.83895,0.841875,0.827,0.823975,0.826225,0.677375,0.6757,0.67445,0.692325,0.660175,0.660225,0.663175,0.66335,0.659625],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NH </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Chris Sununu </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-93438c1e53734b494378" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-93438c1e53734b494378"&gt;{"x":{"values":[0.997975,0.997275,0.997625,0.9976,0.99805,0.99775,0.997425,0.997725,0.99805,0.997625,0.9977,0.998,0.998175,0.99765,0.99755,0.997575,0.9981,0.99765,0.99775,0.99715,0.997675,0.997775,0.998025,0.99745,0.99755,0.997675,0.997825,0.99715,0.997275,0.994825,0.9945],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NH </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Chris Sununu </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-e24f232c977b476d4e50" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-e24f232c977b476d4e50"&gt;{"x":{"values":[0.9978,0.997075,0.997425,0.9974,0.997925,0.997625,0.99725,0.997725,0.9978,0.99745,0.99735,0.99785,0.99795,0.99745,0.9973,0.997325,0.9979,0.997425,0.997525,0.996925,0.997425,0.9976,0.99765,0.997075,0.997225,0.99725,0.997575,0.99685,0.996925,0.99545,0.995225],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NH </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Chris Sununu </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-9d48abff3944001f07ec" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-9d48abff3944001f07ec"&gt;{"x":{"values":[0.987525,0.986,0.98635,0.98545,0.98575,0.986,0.98485,0.986125,0.986275,0.986125,0.9854,0.98545,0.98695,0.986425,0.986575,0.9866,0.987725,0.98705,0.986475,0.98655,0.987875,0.9875,0.987275,0.98755,0.987325,0.9891,0.989375,0.98735,0.9853,0.977025,0.9759],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NM </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Michelle Lujan Grisham </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-ea4b438538a1430bdc42" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-ea4b438538a1430bdc42"&gt;{"x":{"values":[0.8089,0.812475,0.81205,0.811775,0.811125,0.77395,0.77535,0.7744,0.782825,0.781425,0.82785,0.8285,0.830425,0.838375,0.8386,0.8376,0.837475,0.83685,0.84375,0.83985,0.84545,0.843475,0.845025,0.847775,0.844825,0.8476,0.845025,0.881325,0.8802,0.880825,0.884275],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NM </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Michelle Lujan Grisham </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-125a26cbd61261c6abc6" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-125a26cbd61261c6abc6"&gt;{"x":{"values":[0.805425,0.8086,0.808025,0.808025,0.807725,0.7834,0.78525,0.784575,0.7918,0.790375,0.822,0.823525,0.82485,0.831825,0.830875,0.8305,0.83,0.8301,0.836725,0.83365,0.83765,0.8366,0.838,0.839825,0.838325,0.84075,0.839075,0.8691,0.868575,0.8691,0.8719],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NM </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Michelle Lujan Grisham </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-57595410d30786eab1eb" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-57595410d30786eab1eb"&gt;{"x":{"values":[0.6972,0.702075,0.704875,0.698525,0.69905,0.631725,0.6378,0.63875,0.641,0.640125,0.7283,0.732825,0.731025,0.736725,0.73515,0.73865,0.73785,0.735925,0.74315,0.742725,0.744825,0.741225,0.737225,0.742025,0.739975,0.74245,0.7423,0.8476,0.848675,0.8449,0.847],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NV </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Steve Sisolak </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-c991e224260faab02e90" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-c991e224260faab02e90"&gt;{"x":{"values":[0.67745,0.653775,0.65455,0.64455,0.6643,0.667475,0.671525,0.669775,0.67115,0.67515,0.675125,0.673875,0.67265,0.68575,0.6702,0.6716,0.6691,0.67075,0.67245,0.680825,0.67895,0.68,0.68515,0.687125,0.6863,0.684,0.65915,0.669825,0.670025,0.66845,0.669625],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NV </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Steve Sisolak </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-6a3a8dc0384846e2635e" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-6a3a8dc0384846e2635e"&gt;{"x":{"values":[0.630025,0.612925,0.614675,0.60905,0.62035,0.625025,0.629725,0.627325,0.62675,0.632625,0.632825,0.63145,0.629625,0.644325,0.6323,0.635175,0.632025,0.632275,0.6347,0.64275,0.640325,0.642225,0.647325,0.64685,0.6461,0.644175,0.62885,0.63985,0.639375,0.6368,0.64015],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NV </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Steve Sisolak </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-afa80a1232b388c66c8b" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-afa80a1232b388c66c8b"&gt;{"x":{"values":[0.6376,0.60275,0.6057,0.591375,0.620575,0.62385,0.62795,0.624575,0.625025,0.628525,0.629125,0.6262,0.62515,0.63685,0.624975,0.6273,0.62515,0.62515,0.627725,0.6345,0.63355,0.6347,0.631025,0.633325,0.63095,0.629775,0.5976,0.604625,0.60525,0.6036,0.60665],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NY </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Kathy C. Hochul </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-af10373e1c68aa68e3c6" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-af10373e1c68aa68e3c6"&gt;{"x":{"values":[0.9868,0.98655,0.986425,0.98725,0.986575,0.98965,0.98885,0.9889,0.9897,0.989725,0.990025,0.989825,0.9898,0.99,0.990475,0.990975,0.990625,0.9869,0.986725,0.987675,0.986525,0.988375,0.9872,0.986125,0.985925,0.9855,0.981275,0.984175,0.981475,0.9822,0.9824],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NY </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Kathy C. Hochul </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-bf2668a437d15e2c6d7a" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-bf2668a437d15e2c6d7a"&gt;{"x":{"values":[0.992525,0.991925,0.9916,0.991875,0.991925,0.993825,0.993175,0.9932,0.993625,0.9935,0.994,0.993925,0.993575,0.99365,0.993775,0.99465,0.994425,0.992625,0.99255,0.99355,0.992425,0.99365,0.993025,0.992425,0.992375,0.992875,0.99175,0.9929,0.9922,0.9925,0.9922],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NY </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Kathy C. Hochul </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-40ef4f979da1623ac46e" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-40ef4f979da1623ac46e"&gt;{"x":{"values":[0.98585,0.985825,0.985375,0.9859,0.9855,0.990325,0.988975,0.9888,0.9896,0.989925,0.990225,0.9896,0.9898,0.98985,0.990525,0.990675,0.990325,0.9825,0.982375,0.98315,0.982275,0.983725,0.981625,0.98015,0.979625,0.982575,0.97875,0.981725,0.9817,0.982325,0.982225],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> OH </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Mike DeWine </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-3a06a447546ba0dfd5fc" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-3a06a447546ba0dfd5fc"&gt;{"x":{"values":[0.96735,0.9662,0.966125,0.968025,0.968825,0.96935,0.968825,0.9692,0.96745,0.967875,0.967675,0.968275,0.9687,0.96835,0.969175,0.969175,0.967325,0.969325,0.967025,0.966775,0.966425,0.968275,0.9675,0.968775,0.96665,0.9763,0.984875,0.984,0.975325,0.9761,0.976325],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> OH </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Mike DeWine </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-9a21c23616effb22954b" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-9a21c23616effb22954b"&gt;{"x":{"values":[0.9825,0.98075,0.981475,0.981925,0.983675,0.9833,0.98355,0.98405,0.983,0.983225,0.98285,0.98325,0.983825,0.98275,0.984275,0.983875,0.98295,0.984425,0.9835,0.983375,0.9828,0.983,0.983825,0.983225,0.9827,0.987075,0.991175,0.99105,0.98775,0.987775,0.98815],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> OH </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Mike DeWine </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-4d1e32da123c793d8112" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-4d1e32da123c793d8112"&gt;{"x":{"values":[0.937475,0.936425,0.934175,0.93555,0.9563,0.95515,0.955575,0.95705,0.955275,0.95575,0.95485,0.955925,0.955275,0.9558,0.955975,0.95525,0.9535,0.9562,0.9542,0.95435,0.9512,0.953225,0.9564,0.957725,0.956425,0.965625,0.97945,0.977725,0.9728,0.978525,0.978775],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> OK </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Kevin Stitt </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-f908154bbd3dfcee70e2" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-f908154bbd3dfcee70e2"&gt;{"x":{"values":[0.9857,0.985875,0.984625,0.985875,0.9864,0.985125,0.987025,0.986175,0.9858,0.986825,0.986525,0.98625,0.987,0.9858,0.98665,0.985825,0.985625,0.986275,0.9853,0.98625,0.986025,0.985525,0.985775,0.985125,0.983725,0.984875,0.98165,0.979175,0.979675,0.980175,0.979325],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> OK </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Kevin Stitt </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-89ea726dffa9ce48ad97" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-89ea726dffa9ce48ad97"&gt;{"x":{"values":[0.9909,0.990825,0.989675,0.99075,0.9914,0.9904,0.991225,0.991,0.9911,0.990725,0.991375,0.990625,0.991675,0.99025,0.99155,0.990675,0.990475,0.991425,0.98975,0.991375,0.99065,0.99035,0.990975,0.990575,0.98945,0.99045,0.98925,0.98815,0.9881,0.98785,0.988525],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> OK </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Kevin Stitt </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-95fb2b12261ec2f5d1a9" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-95fb2b12261ec2f5d1a9"&gt;{"x":{"values":[0.950925,0.951675,0.948675,0.95165,0.951775,0.952325,0.955575,0.9545,0.9531,0.952825,0.95335,0.9517,0.9527,0.95035,0.953525,0.951675,0.95065,0.952325,0.9502,0.95005,0.949775,0.9498,0.946225,0.94315,0.94255,0.94315,0.92425,0.91865,0.920725,0.9187,0.920525],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> OR </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Tina Kotek </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-116c0c6612b37fb875fe" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-116c0c6612b37fb875fe"&gt;{"x":{"values":[0.6866,0.68565,0.68885,0.68615,0.685,0.6864,0.68745,0.689225,0.688825,0.69425,0.6887,0.691975,0.689025,0.7037,0.7045,0.701575,0.703825,0.703675,0.7042,0.65765,0.658775,0.658425,0.652775,0.6542,0.65765,0.653625,0.655475,0.666625,0.662725,0.6663,0.66245],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> OR </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Tina Kotek </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-127dad0b5e1607f503fc" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-127dad0b5e1607f503fc"&gt;{"x":{"values":[0.685225,0.6847,0.687425,0.6851,0.6838,0.685,0.6878,0.689375,0.688725,0.6945,0.689275,0.692775,0.689825,0.70355,0.7029,0.7006,0.70275,0.702625,0.702825,0.672975,0.6747,0.674375,0.65915,0.661225,0.664425,0.660425,0.662075,0.67335,0.66855,0.634825,0.630625],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> OR </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Tina Kotek </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-cf0e3b095d464bde6393" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-cf0e3b095d464bde6393"&gt;{"x":{"values":[0.738225,0.7386,0.741225,0.737825,0.736175,0.739575,0.7375,0.740125,0.740225,0.7457,0.73845,0.743725,0.7417,0.755775,0.756,0.751,0.753,0.7548,0.75495,0.6691,0.670325,0.668275,0.661525,0.662525,0.66565,0.66305,0.66645,0.675375,0.671375,0.674325,0.670125],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PA </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Josh Shapiro </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-a88377430fa05c167a18" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-a88377430fa05c167a18"&gt;{"x":{"values":[0.887325,0.888825,0.888575,0.88925,0.8854,0.883725,0.88365,0.85745,0.859875,0.864375,0.86305,0.861075,0.863675,0.867075,0.86875,0.866875,0.8708,0.870475,0.869825,0.87455,0.876225,0.8704,0.8696,0.8715,0.87095,0.868775,0.913475,0.92675,0.94405,0.9329,0.931375],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PA </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Josh Shapiro </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-08cc59527fd5330a26a5" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-08cc59527fd5330a26a5"&gt;{"x":{"values":[0.858875,0.858825,0.859,0.859625,0.858475,0.8544,0.85755,0.836625,0.8403,0.84435,0.8437,0.842025,0.8452,0.849925,0.8504,0.848975,0.8523,0.853675,0.851175,0.8562,0.8583,0.852825,0.8534,0.855975,0.85405,0.851975,0.888025,0.8998,0.91645,0.90685,0.90455],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PA </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Josh Shapiro </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-705c15a54f5eac30d4cf" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-705c15a54f5eac30d4cf"&gt;{"x":{"values":[0.8765,0.878375,0.876975,0.87725,0.87455,0.872675,0.872825,0.857625,0.860075,0.864075,0.862725,0.860725,0.864275,0.869475,0.869525,0.8679,0.871675,0.87055,0.86975,0.87605,0.877925,0.871275,0.869925,0.872375,0.87065,0.868625,0.917,0.931875,0.9511,0.9411,0.9395],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> RI </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Daniel J. McKee </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-327d982e85edd5ae261f" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-327d982e85edd5ae261f"&gt;{"x":{"values":[0.952875,0.953625,0.95235,0.95075,0.949825,0.95155,0.9521,0.954975,0.956175,0.954425,0.9553,0.955275,0.9576,0.9566,0.959875,0.9592,0.959525,0.959,0.959425,0.96175,0.962225,0.961725,0.953525,0.9537,0.954175,0.95595,0.977825,0.978725,0.9773,0.9784,0.977125],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> RI </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Daniel J. McKee </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-16ba4da37ead2ebada37" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-16ba4da37ead2ebada37"&gt;{"x":{"values":[0.964275,0.96495,0.964675,0.96225,0.96225,0.96255,0.962675,0.96445,0.9658,0.964775,0.966375,0.965925,0.966925,0.9662,0.96855,0.96835,0.968375,0.968275,0.96855,0.96965,0.9703,0.9695,0.96585,0.965425,0.965875,0.967075,0.981725,0.98315,0.98185,0.9825,0.982475],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> RI </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Daniel J. McKee </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-3674feba5e411e3d51af" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-3674feba5e411e3d51af"&gt;{"x":{"values":[0.89175,0.891125,0.890075,0.8878,0.885625,0.90675,0.90865,0.913325,0.911925,0.910475,0.91415,0.914225,0.915875,0.92295,0.92675,0.928375,0.929675,0.9208,0.921875,0.92715,0.9267,0.927175,0.79265,0.79025,0.793825,0.8124,0.91745,0.925225,0.929775,0.93035,0.928425],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SC </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Henry McMaster </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-25d3de9c237faf07503e" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-25d3de9c237faf07503e"&gt;{"x":{"values":[0.9716,0.9729,0.9691,0.971375,0.973875,0.9731,0.9724,0.97235,0.973275,0.9719,0.972975,0.974625,0.909275,0.928375,0.92635,0.9251,0.92565,0.926825,0.926375,0.9258,0.92295,0.934575,0.937725,0.93525,0.937825,0.93635,0.927675,0.92475,0.926325,0.9257,0.92545],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SC </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Henry McMaster </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-b69f26f456f68f9ea268" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-b69f26f456f68f9ea268"&gt;{"x":{"values":[0.98215,0.98295,0.9804,0.98285,0.983925,0.983075,0.98215,0.98225,0.983,0.981375,0.98265,0.98325,0.96785,0.974825,0.976625,0.97385,0.974925,0.975,0.976125,0.97465,0.974275,0.97875,0.9792,0.979625,0.979525,0.97835,0.9778,0.976075,0.9761,0.9773,0.975975],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SC </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Henry McMaster </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-bb39dbe46badbca62682" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-bb39dbe46badbca62682"&gt;{"x":{"values":[0.9507,0.950375,0.9468,0.9504,0.951975,0.956525,0.9571,0.955225,0.95575,0.954425,0.95595,0.954625,0.7712,0.814675,0.813675,0.814725,0.81555,0.813025,0.813375,0.813375,0.81005,0.87505,0.87365,0.873675,0.874325,0.873425,0.86835,0.8628,0.863075,0.86255,0.8621],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SD </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Kristi Noem </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-801b0d7529ae3df6b5aa" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-801b0d7529ae3df6b5aa"&gt;{"x":{"values":[0.99905,0.999275,0.9993,0.99935,0.9992,0.999225,0.999325,0.999325,0.99925,0.999375,0.99945,0.999375,0.9992,0.99935,0.9975,0.997575,0.996875,0.996825,0.997475,0.997125,0.9973,0.99685,0.99685,0.99665,0.9967,0.9972,0.996675,0.997125,0.996775,0.996725,0.9965],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SD </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Kristi Noem </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-2ddaced4f8a61d70e5ad" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-2ddaced4f8a61d70e5ad"&gt;{"x":{"values":[0.9992,0.999425,0.9994,0.9995,0.9993,0.99935,0.9994,0.99945,0.99945,0.999425,0.999525,0.999425,0.999325,0.999475,0.997875,0.99785,0.997175,0.997225,0.997875,0.9975,0.99775,0.9973,0.997275,0.997025,0.997275,0.997575,0.997125,0.997525,0.997225,0.99705,0.997075],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SD </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Kristi Noem </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-09a8127767988e861e0c" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-09a8127767988e861e0c"&gt;{"x":{"values":[0.982625,0.981975,0.982825,0.9826,0.982425,0.98675,0.986775,0.987925,0.986225,0.986575,0.9874,0.98565,0.98405,0.984925,0.9875,0.9876,0.9859,0.98565,0.986625,0.98635,0.985225,0.98575,0.97935,0.979525,0.97855,0.980575,0.978875,0.97995,0.977925,0.977425,0.976575],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> TN </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Bill Lee </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-05e99bb6b8efe9ab5a75" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-05e99bb6b8efe9ab5a75"&gt;{"x":{"values":[0.997925,0.99815,0.997975,0.998225,0.998275,0.998175,0.998025,0.9985,0.998575,0.99815,0.9979,0.998125,0.99795,0.997975,0.99815,0.998125,0.9979,0.998275,0.998075,0.997925,0.9981,0.99815,0.99775,0.998025,0.998225,0.99785,0.998275,0.997675,0.998225,0.998,0.9977],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> TN </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Bill Lee </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-579bc221eb3d6e7d0942" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-579bc221eb3d6e7d0942"&gt;{"x":{"values":[0.9982,0.998425,0.998225,0.998475,0.9985,0.9985,0.998225,0.998725,0.9988,0.998375,0.99825,0.9984,0.998075,0.998175,0.998425,0.9985,0.998275,0.99845,0.998275,0.998075,0.998275,0.998275,0.998,0.99825,0.9984,0.9981,0.998525,0.998,0.9984,0.998125,0.997875],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> TN </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Bill Lee </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-2c6ce74bf4c661e3d6e7" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-2c6ce74bf4c661e3d6e7"&gt;{"x":{"values":[0.980675,0.979225,0.979275,0.980375,0.9803,0.983775,0.98395,0.984225,0.98405,0.9837,0.9834,0.982975,0.9805,0.9814,0.983125,0.9827,0.9821,0.9817,0.98205,0.983325,0.9812,0.9826,0.977375,0.97795,0.9783,0.978125,0.97755,0.97645,0.9754,0.9755,0.974925],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> TX </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Greg Abbott </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-9b10f4d8e051ae56202d" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-9b10f4d8e051ae56202d"&gt;{"x":{"values":[0.914175,0.914925,0.913575,0.9142,0.913925,0.913475,0.916175,0.914875,0.9144,0.9137,0.914425,0.914925,0.915775,0.9131,0.917125,0.91495,0.91645,0.9171,0.91515,0.911925,0.91455,0.9143,0.9157,0.9142,0.917175,0.915675,0.903575,0.892675,0.895375,0.896525,0.8917],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> TX </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Greg Abbott </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-079afcc43014bd3382b0" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-079afcc43014bd3382b0"&gt;{"x":{"values":[0.954275,0.9537,0.9544,0.9549,0.9538,0.9535,0.954075,0.953775,0.952825,0.954625,0.9527,0.9552,0.95445,0.9535,0.955375,0.95605,0.954825,0.95485,0.9561,0.953325,0.9538,0.953375,0.954875,0.95345,0.9561,0.95445,0.946075,0.941,0.9447,0.942275,0.94105],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> TX </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Greg Abbott </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-05fcecf922b7f08828f1" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-05fcecf922b7f08828f1"&gt;{"x":{"values":[0.853975,0.85615,0.85415,0.85715,0.8565,0.855225,0.8557,0.853525,0.85525,0.85225,0.853825,0.85355,0.85395,0.849625,0.869225,0.867425,0.870225,0.8696,0.86765,0.860475,0.86405,0.862725,0.859475,0.858675,0.862075,0.85995,0.79065,0.79775,0.803125,0.80105,0.795675],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VT </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Phil Scott </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-a379a8ad0bcd8cc73dbe" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-a379a8ad0bcd8cc73dbe"&gt;{"x":{"values":[0.9755,0.97555,0.9763,0.9779,0.976125,0.977475,0.975775,0.9771,0.97545,0.976375,0.9768,0.9777,0.975675,0.975125,0.975275,0.977075,0.975575,0.976725,0.976425,0.976025,0.977325,0.976225,0.99665,0.9966,0.99655,0.996375,0.996475,0.9963,0.996625,0.99625,0.996575],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VT </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Phil Scott </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-ebd03c48935b5b270532" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-ebd03c48935b5b270532"&gt;{"x":{"values":[0.982925,0.983675,0.983575,0.985075,0.98345,0.984225,0.98345,0.983675,0.983325,0.983525,0.9839,0.984375,0.983825,0.981925,0.982825,0.984,0.983725,0.983725,0.983525,0.982675,0.9845,0.98375,0.99805,0.9977,0.99805,0.997675,0.997875,0.997875,0.9979,0.9974,0.99765],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> VT </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Phil Scott </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-e47513ae78f5fa9f9b25" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-e47513ae78f5fa9f9b25"&gt;{"x":{"values":[0.934325,0.93375,0.933125,0.936125,0.9328,0.9315,0.929025,0.93,0.93055,0.929975,0.92845,0.9297,0.930325,0.927075,0.926725,0.92745,0.923175,0.929075,0.9294,0.929625,0.929775,0.929,0.999575,0.9995,0.999775,0.9996,0.999625,0.99955,0.999625,0.99955,0.99955],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> WI </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Tony Evers </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-0b6cf7bec71a5e8f0eeb" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-0b6cf7bec71a5e8f0eeb"&gt;{"x":{"values":[0.7496,0.74795,0.7511,0.75315,0.7515,0.7498,0.747375,0.75065,0.75145,0.752725,0.757025,0.775675,0.776225,0.77735,0.782175,0.74565,0.74815,0.745325,0.752925,0.750925,0.753975,0.7573,0.75545,0.76125,0.759975,0.759425,0.761675,0.79465,0.77585,0.782125,0.782225],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> WI </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Tony Evers </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-94f1657ca66c746689dc" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-94f1657ca66c746689dc"&gt;{"x":{"values":[0.66135,0.655675,0.661,0.65985,0.660125,0.6601,0.6586,0.6606,0.6621,0.662875,0.67005,0.6847,0.6834,0.683175,0.688975,0.661775,0.665675,0.659075,0.6677,0.66705,0.66815,0.6721,0.67145,0.678325,0.676725,0.675675,0.677525,0.7056,0.688725,0.698125,0.695725],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> WI </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Tony Evers </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-d669a6c6d307e4cf5587" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-d669a6c6d307e4cf5587"&gt;{"x":{"values":[0.5072,0.5127,0.508125,0.5117,0.5122,0.507725,0.51295,0.514575,0.512875,0.510325,0.507675,0.610625,0.60825,0.6061,0.6114,0.5926,0.59645,0.5923,0.600575,0.595525,0.603325,0.60505,0.598225,0.603675,0.602275,0.60295,0.6018,0.662375,0.6363,0.648125,0.64505],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> WI </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Tim Michels </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-d669a6c6d307e4cf5587" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-d669a6c6d307e4cf5587"&gt;{"x":{"values":[0.5072,0.5127,0.508125,0.5117,0.5122,0.507725,0.51295,0.514575,0.512875,0.510325,0.507675,0.610625,0.60825,0.6061,0.6114,0.5926,0.59645,0.5923,0.600575,0.595525,0.603325,0.60505,0.598225,0.603675,0.602275,0.60295,0.6018,0.662375,0.6363,0.648125,0.64505],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> WY </td>
+   <td style="text-align:left;"> _classic </td>
+   <td style="text-align:left;"> Mark Gordon </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-b282ab420e0243e2bb19" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-b282ab420e0243e2bb19"&gt;{"x":{"values":[0.9993,0.9997,0.9995,0.9997,0.999625,0.99955,0.999725,0.999525,0.99955,0.999575,0.999425,0.999625,0.9997,0.999725,0.999525,0.999475,0.99955,0.999675,0.999575,0.99965,0.9997,0.99965,0.999525,0.999375,0.9995,0.999375,0.999225,0.999375,0.999175,0.99915,0.999],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> WY </td>
+   <td style="text-align:left;"> _deluxe </td>
+   <td style="text-align:left;"> Mark Gordon </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-8e3d9f2c5939fa18c323" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-8e3d9f2c5939fa18c323"&gt;{"x":{"values":[0.99935,0.999725,0.99955,0.9997,0.999675,0.999575,0.99975,0.999625,0.99965,0.99965,0.9996,0.99965,0.999725,0.999725,0.999525,0.99955,0.999625,0.99975,0.99965,0.999675,0.999725,0.999675,0.999575,0.999425,0.99955,0.999475,0.99935,0.9994,0.999325,0.999225,0.999075],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> WY </td>
+   <td style="text-align:left;"> _lite </td>
+   <td style="text-align:left;"> Mark Gordon </td>
+   <td style="text-align:left;"> &lt;span id="htmlwidget-9d655f3f967dd6e218a0" class="sparkline html-widget"&gt;&lt;/span&gt;
+&lt;script type="application/json" data-for="htmlwidget-9d655f3f967dd6e218a0"&gt;{"x":{"values":[0.996475,0.996425,0.9966,0.9967,0.99675,0.9976,0.998175,0.997775,0.997375,0.997475,0.9974,0.997675,0.997075,0.99755,0.9975,0.997075,0.99755,0.997775,0.9978,0.997525,0.997325,0.997925,0.9923,0.9923,0.992125,0.99245,0.993725,0.992875,0.992875,0.992275,0.991625],"options":{"height":20,"width":60},"width":60,"height":20},"evals":[],"jsHooks":[]}&lt;/script&gt; </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,147 @@
+---
+title: "Tables"
+author: "Samantha Roloff"
+format: html
+editor: visual
+---
+
+The following table is created from the governor_state_toplines_2022 data set available at [data/election-forecasts-2022 at master · fivethirtyeight/data (github.com)](https://github.com/fivethirtyeight/data/tree/master/election-forecasts-2022).
+
+What I wanted to convey with this table is the likely winner of the 2022 state governor's race as of 9/17/2022, how the polling has changed over time, and if the model (expression) used to predict the winner produces different results.
+
+The functionality allows the user to quickly scan and determine which races are very close and then can examine each model to determine why they are producing different results.
+
+In order to format this data set, the data will need to be wrangled in the following ways:
+
+1.) A state, likely winner and likelihood of winning column will be created.
+
+2.) The data will be split by expression type and filtered to the last month of polling.
+
+3.) A sparkline depicting the likely winner's polling over the last month will be added to the table.
+
+4.) Formatting enhancements to improve readability using the kable and kableExtra packages will be added.
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(plotly)
+library(knitr)
+library(kableExtra)
+library(sparkline)
+
+#read in the dataframe
+gov_df<-readr::read_csv('governor_state_toplines_2022.csv', show_col_types = FALSE)
+
+#decide if the state is likely to have a democrat or republican governor
+gov_df$Governorship_leans <- with(gov_df, ifelse(winner_Rparty < winner_Dparty, 'Democrat', 'Republican'))
+
+# convert date field to date field
+gov_df$forecastdate <- as.Date(gov_df$forecastdate, format = "%m/%d/%Y" )
+#class(gov_df$forecastdate)
+
+#make a state field
+gov_df$state<- strtrim(gov_df$district, 2)
+
+#make a likely winner column for our table
+gov_df$likely_winner<-with(gov_df, ifelse(winner_Rparty < winner_Dparty, gov_df$name_D1, gov_df$name_R1))
+
+#likelihood of winning for the likely_winner
+gov_df$likelihood_winner <- with(gov_df, ifelse(gov_df$Governorship_leans == 'Democrat', gov_df$winner_D1, gov_df$winner_R1))
+
+#add a blank column for our sparkline to go
+gov_df$sparkline<-NA
+
+#filter data to previous month
+gov_df <- gov_df %>%
+   filter(forecastdate>max(forecastdate)-31)
+
+
+#reduce the # of columns
+gov_df_slim <- subset (gov_df, select = c(state, expression, likely_winner, forecastdate, likelihood_winner, sparkline))
+
+#There is probably a better way to do this, but a nested for loop was taking WAY too long.
+
+#filter to _lite expression
+gov_df_lite <- gov_df_slim %>% filter(expression == '_lite')
+
+# add the data for the figure
+for(s in gov_df_lite$state)
+  {state_polling <- gov_df_lite %>%
+    filter(state==s) %>%
+    arrange(forecastdate) %>%
+    pull(likelihood_winner)
+  # add figure to data.frame
+  gov_df_lite[which(gov_df_lite$state==s),"sparkline"] <- spk_chr(state_polling)
+}
+
+#reduce the # of columns
+gov_df_lite <- subset (gov_df_lite, select = c(state, expression, likely_winner, sparkline))
+
+#drop duplicates
+gov_df_lite<-distinct(gov_df_lite)
+
+
+
+#filter to _classic expression
+gov_df_classic <- gov_df_slim %>% filter(expression == '_classic')
+
+# add the data for the figure
+for(s in gov_df_classic$state)
+  {state_polling <- gov_df_classic %>%
+    filter(state==s) %>%
+    arrange(forecastdate) %>%
+    pull(likelihood_winner)
+  # add figure to data.frame
+  gov_df_classic[which(gov_df_classic$state==s),"sparkline"] <- spk_chr(state_polling)
+}
+
+#reduce the # of columns
+gov_df_classic <- subset (gov_df_classic, select = c(state, expression, likely_winner, sparkline))
+
+#drop duplicates
+gov_df_classic<-distinct(gov_df_classic)
+
+
+
+#filter to _deluxe expression
+gov_df_deluxe <- gov_df_slim %>% filter(expression == '_deluxe')
+
+# add the data for the figure
+for(s in gov_df_deluxe$state)
+  {state_polling <- gov_df_deluxe %>%
+    filter(state==s) %>%
+    arrange(forecastdate) %>%
+    pull(likelihood_winner)
+  # add figure to data.frame
+  gov_df_deluxe[which(gov_df_deluxe$state==s),"sparkline"] <- spk_chr(state_polling)
+}
+
+#reduce the # of columns
+gov_df_deluxe <- subset (gov_df_deluxe, select = c(state, expression, likely_winner, sparkline))
+
+#drop duplicates
+gov_df_deluxe<-distinct(gov_df_deluxe)
+
+
+#stack the dataframe
+gov_df_slim <- rbind(gov_df_lite, gov_df_classic, gov_df_deluxe)
+
+gov_df_slim <- gov_df_slim %>% arrange(state, expression)
+
+#table formatting
+tbl_gov_df_slim <- gov_df_slim %>%
+  knitr::kable(col.names = c(
+    "State",
+    "Expression",
+    "Likely Winner",
+    "Likelihood of Winning"
+  )) %>% kable_styling(font_size = 18) %>% 
+  kable_classic(full_width = FALSE, html_font = "arial") %>% 
+  kable_paper(lightable_options = "hover", full_width = FALSE)
+
+
+tbl_gov_df_slim
+
+
+```
