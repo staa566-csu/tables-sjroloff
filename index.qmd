@@ -130,8 +130,11 @@ gov_df_slim <- rbind(gov_df_lite, gov_df_classic, gov_df_deluxe)
 gov_df_slim <- gov_df_slim %>% arrange(state, expression)
 
 #table formatting
+sparkline(0)
 tbl_gov_df_slim <- gov_df_slim %>%
-  knitr::kable(col.names = c(
+  knitr::kable(
+    escape=FALSE,
+    col.names = c(
     "State",
     "Expression",
     "Likely Winner",
